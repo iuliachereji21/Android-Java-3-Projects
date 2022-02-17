@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textHelloWorld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="131dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="170dp"
+        android:fontFamily="serif"
+        android:text="Hello World!"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerColor"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="250dp"
+        android:dropDownWidth="match_parent"
+        android:entries="@array/colors"
+        android:textSize="100sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:visibility="visible" />
+
+    <Spinner
+        android:id="@+id/spinnerFont"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="157dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerColor"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginBottom="3dp"
+        android:text="Color:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHelloWorld" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="10dp"
+        android:text="Font:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerFont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textHelloWorld" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
